@@ -299,7 +299,7 @@ if (!isNull _av) then
 private _roadKilled = false;
 _droneKilled = false;
 
-if ((_killer isKindOf "uav") || (_killer isKindOf "UAV_01_base_F") || (_killer isKindOf "UAV_02_base_F") || (_killer isKindOf "UAV_03_base_F") || (_killer isKindOf "UAV_04_base_F") || (_killer isKindOf "UAV_05_Base_F") || (_killer isKindOf "UAV_06_base_F") || (_killer isKindOf "UGV_01_base_F") || (_killer isKindOf "UGV_02_Base_F")) then
+if (unitIsUAV _killer) then
 {
 	_droneController = UAVControl _killer select 0;
 	if (isPlayer _droneController) then
